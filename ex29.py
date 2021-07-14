@@ -40,3 +40,10 @@ if people <= dogs:
 if people == dogs:
     # print result
     print("People are dogs")
+
+
+# 1. What do you think the `if` does to the code below it?
+##### It indents the code, checks statement
+
+# 2. Why does the code under the `if` need to be indented four spaces?
+##### This allows the computer to read the return/print statement, else it cannot distinguish it from the other statements

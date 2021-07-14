@@ -55,3 +55,11 @@ I completed a number of python exercises to build my python fundamentals, the pu
 * ex25.py - Even more recap and practice
 
 * ex26.py& exercise26.txt - Test program
+
+* ex27.py - Memorizing logic, truth tables, truth terms
+
+* ex28.py - Boolean practice
+
+* ex29.py - What-if, create if statement examples
+
+* ex30.py - if, elif, else statement examples

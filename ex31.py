@@ -37,4 +37,71 @@ elif door == "2":
         print("The insanity rots your eyes into a pool of muck.")
         print("Good job.")
 else:
-    print("Youn stumble around and fall on a knife and die.  Good job!")
+    print("You stumble around and fall on a knife and die.  Good job!")
+
+# America the beautiful
+print("""You are America, choose a country to invade. Invade Iraq #1, or Iran #2, even Qatar #3?""")
+
+invade = input("> ")
+
+if invade == "1":
+    print("No weapons of mass destruction here, however lots of oil.")
+    print("What do you do?")
+    print("1. Leave the country.")
+    print("2. Stay, take the oil.")
+
+    oil = input("> ")
+
+    if oil == "1":
+        print("You go home, good choice")
+    elif oil == "2":
+        print("You stay, now stuck in the country with no exit plan. Scum.")
+    else:
+        print(f"Please make a decision {oil}, the world is watching.")
+        print("Land of the beautiful home of the brave.")
+
+elif invade == "2":
+    print("Trump becomes president.")
+    print("1. Bleach your skin orange.")
+    print("2. Get the trump wig.")
+    print("3. Catch the next flight home.")
+
+    trump = input("> ")
+
+    if trump == "1" or trump == "2":
+        print("You get into serious twitter beef.")
+        print("C'mon lad.")
+    else:
+        print("Twitter cancels your account and you are banned.")
+        print("Build another trump hotel.")
+else:
+    print("Your son stabs you in the back while you have your legs waxed.")
+
+# Penalty shootout scenario
+print("""You are taking a penalty for England, which way do you go? Do you go left #1, right #2 or middle #3?""")
+
+penalty = input("> ")
+
+if penalty == "1":
+    print("Congratulations your team has won! Well done!")
+elif penalty == "2":
+    print("Saved. The keep dived the correct way. Unlucky.")
+else:
+    print("You chipped it down the middle!? Cheeky.")
+
+
+# Lord of the rings Character
+print("""It's Lord of the Rings, you are about to enter a battle to save middle earth.
+Which weapon do you choose?
+Long sword and grit #1,
+Bow& arrow and cunning #2,
+or battle axe and stubborness #3?""")
+
+battle = input("> ")
+
+if battle == "1":
+    print("You are aragorn, the future King.")
+elif battle == "2":
+    print("You are Legolas, the elf prince.")
+else:
+    print("You are Gimley, the mouthy dwarf.")

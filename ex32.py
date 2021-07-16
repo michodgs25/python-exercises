@@ -62,7 +62,7 @@ print(type(mylist))
 # LIST() CONSTRUCTOR
 # You can use the list() constructor when creating a new list
 # LIST CONSTRUCTOR EXAMPLE:
-thislist = newlist(("apple", "banana", "cherry")) # note the double round-brackets
+thislist = list(("apple", "banana", "cherry")) # note the double round-brackets
 print(thislist)
 
 # create three lists, assign each to a variable
@@ -102,3 +102,25 @@ for i in elements:
 # and stops before a specified number.
 # SYNTAX:
 ######## range(start, stop, step)
+
+################# PYTHON LIST METHODS
+
+# APPEND(): Add a single element to the end of the list
+
+# CLEAR(): Removes all items from the list
+
+# COPY(): returns a shallow copy of the list
+
+# COUNT(): returns count of the element in the list
+
+# EXTEND(): adds iterable elements to the end of the list
+
+# INDEX(): returns the index of the element in the list
+
+# INSERT(): insert an element into the list
+
+# POP(): removes item from the list
+
+# REVERSE(): reverses the list
+
+# SORT(): sorts elements of a list

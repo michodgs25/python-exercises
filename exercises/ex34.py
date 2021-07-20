@@ -2,8 +2,8 @@
 
 # Lists are useful, but unless you can get things in them, they aren't all that good.
 
-animals = ['Bear', 'Tiger', 'Penguin', 'Zebra']
-Bear = animals[0]
+# animals = ['Bear', 'Tiger', 'Penguin', 'Zebra']
+# Bear = animals[0]
 # take a list of animals, and then you get the(1st) one using 0?
 # Python lists start at 0
 
@@ -31,10 +31,17 @@ animals = ['bear', 'python3.6', 'peacock', 'kangaroo', 'whale', 'platypus']
 
 # 8. The animal at 4 is a whale
 
-print(animals)
+print(*animals[0:6], sep=", ")
+
+# print out each element, comment the ordinal and the cardinal
 print(animals[0]) # ordinal: first,  Cardinal: 0
 print(animals[1]) # ordinal: second, Cardinal: 1
 print(animals[2]) # ordinal: third,  Cardinal: 2
 print(animals[3]) # ordinal: fourth, Cardinal: 3
 print(animals[4]) # ordinal: fifth,  Cardinal: 4
 print(animals[5]) # ordinal: sixth,  Cardinal: 5
+
+
+footballteams = ['Barcelona', 'Real Madrid', 'Manchester United', 'Chelsea']
+print(*footballteams, sep=", ")
+print(*footballteams[0:4], sep=", ")

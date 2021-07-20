@@ -13,18 +13,37 @@
 # 2. Review while-statements and make sure that the boolean test will become False at some point.
 # 3. When in doubt print out your test variable at the top and bottom of the while-loop to see what's it doing.
 
-i = 0
-numbers = []
 
-while i < 6:
-    print(f"At the top i is {i}")
-    numbers.append(i)
+# while loop
+# i = 0
+# numbers = []
 
-    i = i + 1
-    print("Numbers now: ", numbers)
-    print(f"At the bottom i is {i}")
+# while i < six:
+#    print(f"At the top i is {i}")
+#    numbers.append(i)
 
-print("The numbers: ")
+#    i = i + 1
+#    print("Numbers now: ", numbers)
+#    print(f"At the bottom i is {i}")
 
+# print("The numbers: ")
+
+# for num in numbers:
+#    print(num)
+
+
+# converted while loop in to a function that can called
+def loopy(i, x, numbers):
+    if (i < x):
+        print("At the top i is %d" %i)
+        numbers.append(i)
+
+        i += 3
+        print("Numbers now: ", numbers)
+        print("At the bottom i is %d" %i)
+        loopy(i, x, numbers)
+    return numbers
+
+numbers = loopy(0, 10, [])
 for num in numbers:
     print(num)

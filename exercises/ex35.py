@@ -81,14 +81,14 @@ from sys import exit
 
 # start()
 
-# define game start function, provide user with two options 'right or left door'
+# define game start function, provide user with two options 'right or left door' or 'middle door'
 def start():
     print("""
     You are in a dark room.
-    There is a door to your right and left.
+    There is a door to your right, left and middle.
     Which one do you take?
 
-    Type: right or left
+    Type: right, left or middle
     """)
 
     # user choice input prompt, either left or right
@@ -99,6 +99,8 @@ def start():
         bear_room()
     elif choice == "right":
         cthulhu_room()
+    elif choice == "middle":
+        crocodile_room()
     else:
         dead("You stumble around the room until you starve.")
         exit()
@@ -165,6 +167,46 @@ def cthulhu_room():
     else:
         cthulhu_room()
 
+# define crocodile room function
+def crocodile_room():
+    print("""
+    This room has the snappy crocodile swimming in a murky lake.
+    There is a door at the end of the lake.
+    You must get past the crocodile.
+    Do you shoot the crocodile with your shotgun,
+    or distract it with funky dance moves?
+
+    Type: shotgun or dance
+    """)
+
+    # infinite loop, loop breaks when user chooses either shotgun or dance
+    while True:
+        # user prompt user to choose shotgun or dance
+        choice = input("> ")
+
+        # if choice equal to shotgun, gameover
+        if choice == "shotgun":
+            dead("""
+            You frighten the crocodile and,
+             he drags you into the icy depths of the lake.
+             """)
+        elif choice == "dance":
+            print("""
+            crocodile is so impressed with how you move your hips,
+            he allows you too cross the lake
+            You can go through the door now.
+
+            Type: open door""")
+            crocodile_moved = True
+
+        elif choice == "dance" and not crocodile_moved:
+            dead("The crocodile gets pissed off and spins you till your lungs explode.")
+
+        elif choice == "open door" and crocodile_moved:
+            palace()
+        else:
+            crocodile_room()
+
 # define gold room function, user ends up here if chooses successfully
 def gold_room():
     print("This room is full of gold. How much do you take?")
@@ -183,6 +225,42 @@ def gold_room():
     # user takes more than 50 gold, they lose and the game ends
     else:
         dead("You greedy bastard!")
+
+# define palace function, user must fight the king to win his throne
+def palace():
+    print("""
+    You have arrived at the royal palace.
+    And must face the king, you have the choice of three weapons.
+    A sword, axe or chopsticks.
+
+    Type which one: sword, axe or chopsticks.
+    """)
+
+    # prompt ask user which weapon choose to fight the king
+    choice = input("> ")
+
+    # if-elif-else group choices, user must pick the right weapon to win
+    if choice == "sword":
+        dead("""
+        The king is a master swordsman, he drives his kings blood blade,
+        straight through your beating heart! Good job.
+        """)
+    elif choice == "axe":
+        dead("""
+        You put up a great fight against the king,
+        howver he uses his snake whip to strangle the life out of you.
+        """)
+    elif choice == "chopsticks":
+        print("""
+        You are the reigning choppy chopsticks champ,
+         and outwit the old king to take his throne!
+
+         All hail the new king!
+         """)
+        exit(0)
+    # if the user chooses none of the choices, stay in the room
+    else:
+        palace()
 
 # define dead function, if user picks wrong option, game ends
 def dead(why):

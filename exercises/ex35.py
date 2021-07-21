@@ -165,19 +165,22 @@ def cthulhu_room():
     else:
         cthulhu_room()
 
-
+# define gold room function, user ends up here if chooses successfully
 def gold_room():
     print("This room is full of gold. How much do you take?")
 
+    # prompt asks user how much gold they want to take
     choice = input("> ")
     if 0 in choice or 1 in choice:
         how_much =  int(choice)
     else:
+        # if user does not type a number, gameover
         dead("Man, learn to type a number.")
-
+    # if user takes less than 50 gold, they win and the game ends
     if how_much < 50:
         print("Nice, you're not greedy, you win!")
         exit(0)
+    # user takes more than 50 gold, they lose and the game ends
     else:
         dead("You greedy bastard!")
 

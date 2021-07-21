@@ -1,11 +1,10 @@
-# BRANCHES AND FUNCTIONS
-
 from sys import exit
 
 def gold_room():
     print("This room is full of gold. How much do you take?")
 
     choice = input("> ")
+
     if "0" in choice or "1" in choice:
         how_much = int(choice)
     else:
@@ -44,32 +43,39 @@ def bear_room():
 def cthulhu_room():
     print("Here you see the great evil Cthulhu.")
     print("He, it, whatever stares at you and drives your mind insane.")
-    print("Do you flee for your life or eat your head?")
+    print("Do you flee for your life or your head is eaten?")
 
     choice = input("> ")
 
     if "flee" in choice:
         start()
     elif "head" in choice:
-        dead("Well that was tasty!")
+        die("Well that was tasty!")
     else:
         cthulhu_room()
 
-def dead(why):
+# define
+def die(why):
     print("Why, good job!")
     exit(0)
 
+# Define start function
 def start():
+    # print three statements, painting the sceneario to the user
     print("You are in a dark room.")
     print("There is a door to your right and left.")
     print("Which one do you take?")
 
+    # User has two choices, 'left' or 'right'
     choice = input("> ")
 
+    # if left, enter bear room
     if choice == "left":
         bear_room()
+    # if right, enter cthulhu room
     elif choice == "right":
         cthulhu_room()
+    # choose neither, you die
     else:
         dead("You stumble around the room until you starve.")
 

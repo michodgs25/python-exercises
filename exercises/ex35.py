@@ -171,7 +171,7 @@ def gold_room():
 
     # prompt asks user how much gold they want to take
     choice = input("> ")
-    if 0 in choice or 1 in choice:
+    if "0" in choice or "1" in choice:
         how_much =  int(choice)
     else:
         # if user does not type a number, gameover

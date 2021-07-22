@@ -1,3 +1,5 @@
+from sys import exit
+
 # DESIGNING AND DEBUGGING
 
 #                   RULES FOR IF-STATEMENTS
@@ -34,3 +36,40 @@
 # 3. Make sure parts of your program work as you work on them.
 #    Do not write massive files of code before you try to run them.
 #    Code a little, run a little, fix a little
+
+
+# Game premise:
+# You have crashed landed on a remote island and, and need to figure out an escape plan before your few food supplies run out.
+# However you will need to move quick, as by nightfall the islands blood thirsty demons will reveal themselves,
+# and they know your location already.
+# Game Objectives:
+#                 Survive the night
+#                 Escape the island by tomorrow mid-afternoon
+
+
+# START GAME
+
+# define death, gameover finished
+def dead(why):
+    print(why, "Good job!")
+    exit(0)
+# define start of game
+def start():
+    print("""
+    You awake amidst the wreckage of your private plane.
+    It's the middle of the night, and the only light for miles around,
+    are the burning flames rapidly making their way towards you from the cockpit.
+    You must react quickly to get out of the plane.
+
+    Type: cut seatbelt
+    """)
+
+    choice = input("> ")
+
+    if choice == "cut seatbelt":
+        print("Well done, now exit the plane before it explodes!")
+    else:
+        dead("You burn alive")
+        exit()
+
+start()

@@ -1,86 +1,97 @@
 from sys import exit
 
+#                                 ORIGINAL GAME
+
 #def gold_room():
-#    print("This room is full of gold. How much do you take?")
+    #print("This room is full of gold. How much do you take?")
 
-#    choice = input("> ")
+    #choice = input("> ")
 
-#    if "0" in choice or "1" in choice:
-#        how_much = int(choice)
-#    else:
-#        dead("Man, learn to type a number.")
+    #if "0" in choice or "1" in choice:
+    #    how_much = int(choice)
+    #else:
+    #    dead("Man, learn to type a number.")
 
-#    if how_much < 50:
+    #    if how_much < 50:
 #        print("Nice, you're not greedy, You win!")
-#        exit(0)
-#    else:
-#        dead("You greedy bastard!")
+#            exit(0)
+#        else:
+#            dead("You greedy bastard!")
 
 #def bear_room():
-#    print("There is a bear here.")
-#    print("The bear has a bunch of honey.")
-#    print("The fat bear is in front of another door.")
-#    print("How are you going to move the bear?")
-#    print(" 'take honey' or 'taunt bear' ")
-#    bear_moved = False
+    #print("There is a bear here.")
+    #print("The bear has a bunch of honey.")
+    #print("The fat bear is in front of another door.")
+    # print("How are you going to move the bear?")
+    # print(" 'take honey' or 'taunt bear' ")
+    # bear_moved = False
 
-#    while True:
-#        choice = input("> ")
+    # while True:
+    #    choice = input("> ")
 
-#        if choice == "take honey":
-#            dead("The bear looks at you and then slaps your face off.")
-#        elif choice == "taunt bear" and not bear_moved:
-#            print("The bear has moved from the door.")
-#            print("You can go through it now.")
-#            bear_moved = True
-#        elif choice == "taunt bear" and bear_moved:
-#            dead("Bear gets pissed off and chews both your legs off.")
-#        elif choice == "open door" and bear_moved:
-#            gold_room()
-#        else:
-#            print("I got no idea what that means.")
+    #    if choice == "take honey":
+    #        dead("The bear looks at you and then slaps your face off.")
+    #    elif choice == "taunt bear" and not bear_moved:
+    #        print("The bear has moved from the door.")
+    #        print("You can go through it now.")
+    #        bear_moved = True
+    #    elif choice == "taunt bear" and bear_moved:
+    #        dead("Bear gets pissed off and chews both your legs off.")
+    #    elif choice == "open door" and bear_moved:
+    #        gold_room()
+    #    else:
+    #         print("I got no idea what that means.")
 
-# def cthulhu_room():
-#    print("Here you see the great evil Cthulhu.")
-#    print("He, it, whatever stares at you and drives your mind insane.")
-#    print("Do you flee for your life or your head is eaten?")
+#def cthulhu_room():
+    #print("Here you see the great evil Cthulhu.")
+    #print("He, it, whatever stares at you and drives your mind insane.")
+    #print("Do you flee for your life or your head is eaten?")
 
-#    choice = input("> ")
+    #choice = input("> ")
 
-#    if "flee" in choice:
-#        start()
-#    elif "head" in choice:
-#        die("Well that was tasty!")
-#    else:
-#        cthulhu_room()
+    #if "flee" in choice:
+    #    start()
+    # elif "head" in choice:
+    #    die("Well that was tasty!")
+    #else:
+    #    cthulhu_room()
 
-# define
-# def die(why):
-#    print(Why, "Good job!")
+
+# define death, gameover finished
+#def dead(why):
+#    print(why, "Good job!")
 #    exit(0)
 
-# Define start function
-# def start():
+# Define start game function
+#def start():
     # print three statements, painting the sceneario to the user
-#    print("You are in a dark room.")
-#    print("There is a door to your right and left.")
-#    print("Which one do you take?")
+    #print("You are in a dark room.")
+    #print("There is a door to your right and left.")
+    #print("Which one do you take?")
 
     # User has two choices, 'left' or 'right'
-#    choice = input("> ")
+    #choice = input("> ")
 
     # if left, enter bear room
-#    if choice == "left":
-#        bear_room()
+    #if choice == "left":
+    #    bear_room()
     # if right, enter cthulhu room
-#    elif choice == "right":
-#        cthulhu_room()
-    # choose neither, you die
-#    else:
-#        dead("You stumble around the room until you starve.")
+    #elif choice == "right":
+    #    cthulhu_room()
+        # choose neither, you die
+    #else:
+    #    dead("You stumble around the room until you starve.")
 
 # start()
 
+
+
+#                    DEVELOPED AND EXTENDED GAME TWO
+
+# define death, gameover finished
+def die(why):
+    print(why, "Good job!")
+    exit(0)
 # define game start function, provide user with two options 'right or left door' or 'middle door'
 def start():
     print("""

@@ -1,6 +1,20 @@
 # python-exercises
 I completed a number of python exercises to build my python fundamentals, the purpose for undertaking this project is to build my understanding of not only the Python language but also hardcore coding principles& systems.
 
+## Run locally
+
+You can download the project.
+
+Install python 3.6 or above to your machine.
+
+I personally use atom for these exercises.
+
+I use a windows, just google the commands if using linux or mac
+
+I run a file by typing python *filename*
+
+---------
+
 ## Exercises
 
 * ex1.py - Comments and pound Characters

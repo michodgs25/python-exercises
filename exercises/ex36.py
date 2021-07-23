@@ -51,7 +51,7 @@ from sys import exit
 
 # First define death, gameover
 def dead(why):
-    print(why, "Good job!")
+    print(why, "Gameover")
     exit(0)
 
 # define start of game
@@ -63,12 +63,12 @@ def start():
     are the burning flames rapidly making their way towards you from the cockpit.
     You must react quickly to get out of the plane.
 
-    Type: cut seatbelt
+    Type: a - cut seatbelt
     """)
 
     choice = input("> ")
 
-    if choice == "cut seatbelt":
+    if choice == "a":
         print("Well done, now exit the plane before it explodes!")
         retrieve_extinguisher()
     else:
@@ -90,29 +90,31 @@ def retrieve_extinguisher():
 
     Choose:
     *type
-          cockpit
-          escape hatch
-          underpassage
+          a. cockpit
+          b. escape hatch
+          c. underpassage
     """)
 
     # user prompt, must choose between three choices to retrieve the fire extinguisher
     choice = input("> ")
 
     # if user chooses cockpit, gameover
-    if choice == "cockpit":
+    if choice == "a":
         dead("You burn alive! The fire is coming from the cockpit!")
     # chooses either option, user succeeds
-    elif choice == "underpassage":
+    elif choice == "b":
         print("Well done you made it inside, just in time.")
         put_fire_out()
-    elif choice == "escape hatch":
+    elif choice == "c":
         print("Well done you made it inside, just in time.")
         put_fire_out()
         # user must choose out of the three options
     else:
+        # if user does not pick one of the available options, otherwise remain stay in the scene
         print("Please hurry, your survival counts on it!")
         retrieve_extinguisher()
 
+# Next scene, user needs to put out the fire
 def put_fire_out():
     print("""
     You have found the extinguisher,
@@ -123,8 +125,61 @@ def put_fire_out():
 
     Which section will you extinguish first, which will put the fire OUT the fastest?
 
-    type*
+    type option number*
+
+    1. passenger section
+    2. cockpit entrance
+    3. giveup
+    """)
+
+    # prompt user to pice an option
+    choice = input("> ")
+
+    # if elif and else group
+    if choice == "1":
+        dead("The fire is too strong, and melts your eye balls.")
+    elif choice == "2":
+        print("Fire extinguished!! Well done!")
+        survive_night()
+    else:
+        choice != "1" or "2"
+        dead("Good luck in the next life.")
+
+# define survive night function, user must choose how he will survive
+def survive_night():
+    print("""
+    You have extinguished the fire well done, however during the commotion,
+    this has drawn the attention of the island demons.
+
+    Now that you've extinguished the fire, there is no light whatsoever.
+    A demon crashes into the side of cockpit, you have seconds to make a decision.
+
+    choose
+    type option letter*
+
+        x. Fight the demon with your fire extinguisher
+        y. Seal off the cockpit and hide in the pilot supplies cupboard.
+        z. You discover a gun in the glove compartment and shoot the demon.
+    """)
+
+    choice = input("> ")
+
+
+
+def island_cave():
+    print("""
+    Phew that was close, you were very lucky.
+
+    Thankfully it was a full moon and this protected you from the demon, the legends call....
+    soul slayer.
+    In your blind desperation you found a cave and hidden under a huge rock.
+    However this is the soul slayers den, and it is not happy.
+    You still have the gun but you only have two bullets left.
+
+    What is your next move?
 
     """)
+
+    choice = input("> ")
 
 start()

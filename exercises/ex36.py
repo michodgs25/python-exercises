@@ -49,13 +49,15 @@ from sys import exit
 
 # START GAME
 
-# define death, gameover finished
+# First define death, gameover
 def dead(why):
     print(why, "Good job!")
     exit(0)
+
 # define start of game
 def start():
     print("""
+
     You awake amidst the wreckage of your private plane.
     It's the middle of the night, and the only light for miles around,
     are the burning flames rapidly making their way towards you from the cockpit.
@@ -68,8 +70,61 @@ def start():
 
     if choice == "cut seatbelt":
         print("Well done, now exit the plane before it explodes!")
+        retrieve_extinguisher()
     else:
-        dead("You burn alive")
-        exit()
+        dead("You burn alive. Ouch. Game over!")
+
+# user must put out the fire, the plane is the only hope of having shelter
+# a fire extinguisher is located at the rear of the plane
+# There are three ways presented: escape hatch, underpassage or cockpit
+
+# define put_fire_out function, user needs to pick right choice to enter next sceneario
+def retrieve_extinguisher():
+    print("""
+    You stand outside and realise you must put out the fire to save the remainder of the plane,
+    this plane could be your only chance of calling for help.
+    There is a fire extinguisher at the rear of the plane,
+    how will you get there without dying?
+
+    Choose wisely, otherwise the fire will engulf the plane and yourself
+
+    Choose:
+    *type
+          cockpit
+          escape hatch
+          underpassage
+    """)
+
+    # user prompt, must choose between three choices to retrieve the fire extinguisher
+    choice = input("> ")
+
+    # if user chooses cockpit, gameover
+    if choice == "cockpit":
+        dead("You burn alive! The fire is coming from the cockpit!")
+    # chooses either option, user succeeds
+    elif choice == "underpassage":
+        print("Well done you made it inside, just in time.")
+        put_fire_out()
+    elif choice == "escape hatch":
+        print("Well done you made it inside, just in time.")
+        put_fire_out()
+        # user must choose out of the three options
+    else:
+        print("Please hurry, your survival counts on it!")
+        retrieve_extinguisher()
+
+def put_fire_out():
+    print("""
+    You have found the extinguisher,
+    you need to put the fire out quickly.
+
+    The fire has engulfed the main seating area,
+    the extinguisher has a limited supply however, so choose wisely.
+
+    Which section will you extinguish first, which will put the fire OUT the fastest?
+
+    type*
+
+    """)
 
 start()

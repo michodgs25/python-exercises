@@ -142,8 +142,10 @@ def put_fire_out():
         print("Fire extinguished!! Well done!")
         survive_night()
     else:
+        # if user choice is 3, or a none of the options, code below runs
         choice != "1" or "2"
         dead("Good luck in the next life.")
+
 
 # define survive night function, user must choose how he will survive
 def survive_night():
@@ -162,8 +164,31 @@ def survive_night():
         z. You discover a gun in the glove compartment and shoot the demon.
     """)
 
+    # input prompt, user must choose between options: x, y, z
     choice = input("> ")
 
+    if choice == "x":
+        dead("""
+        You attempt to swing at the soul slayer but it morphs,
+        and attacks. The demon grimey black pit of a face feasts on your soul.
+        """)
+    elif choice == "y":
+        print("""
+        You decide to wait out the night, with the gun loaded,
+        and pressed against the cupboard door.
+        You have survived...for now.
+        """)
+        morning_break()
+    elif choice == "z":
+        print("""
+        You startle the demon who has never experienced a gun before,
+        however you do not kill it and the bullet is spat out.
+        You make a run for it out into the darkness...
+        """)
+        island_cave()
+    else:
+        print("HURRY!")
+        survive_night()
 
 
 def island_cave():
@@ -181,5 +206,10 @@ def island_cave():
     """)
 
     choice = input("> ")
+
+
+def morning_break():
+    print("Congratulations you have survived the night.")
+
 
 start()

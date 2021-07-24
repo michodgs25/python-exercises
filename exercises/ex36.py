@@ -54,9 +54,11 @@ def dead(why):
     print(why, "Gameover")
     exit(0)
 
+
 # define start of game
 def start():
-    print("""
+    print(
+        """
 
     You awake amidst the wreckage of your private plane.
     It's the middle of the night, and the only light for miles around,
@@ -64,7 +66,8 @@ def start():
     You must react quickly to get out of the plane.
 
     *type: a - to cut seatbelt
-    """)
+    """
+    )
 
     choice = input("> ")
 
@@ -74,13 +77,15 @@ def start():
     else:
         dead("You burn alive. Ouch.")
 
+
 # user must put out the fire, the plane is the only hope of having shelter
 # a fire extinguisher is located at the rear of the plane
 # There are three ways presented: escape hatch, underpassage or cockpit
 
 # define put_fire_out function, user needs to pick right choice to enter next sceneario
 def retrieve_extinguisher():
-    print("""
+    print(
+        """
     You stand outside and realise you must put out the fire to save the remainder of the plane,
     this plane could be your only chance of calling for help.
     There is a fire extinguisher at the rear of the plane,
@@ -94,7 +99,8 @@ def retrieve_extinguisher():
           a. cockpit
           b. escape hatch
           c. underpassage
-    """)
+    """
+    )
 
     # user prompt, must choose between three choices to retrieve the fire extinguisher
     choice = input("> ")
@@ -115,9 +121,11 @@ def retrieve_extinguisher():
         print("Please hurry, your survival counts on it!")
         retrieve_extinguisher()
 
+
 # Next scene, user needs to put out the fire
 def put_fire_out():
-    print("""
+    print(
+        """
     You have found the extinguisher,
     you need to put the fire out quickly.
 
@@ -131,7 +139,8 @@ def put_fire_out():
     a. passenger section
     b. cockpit entrance
     c. giveup
-    """)
+    """
+    )
 
     # prompt user to pice an option
     choice = input("> ")
@@ -150,7 +159,8 @@ def put_fire_out():
 
 # define survive night function, user must choose how he will survive
 def survive_night():
-    print("""
+    print(
+        """
     You have extinguished the fire well done, however during the commotion,
     this has drawn the attention of the island demons.
 
@@ -162,37 +172,53 @@ def survive_night():
         a. Fight the demon with your fire extinguisher
         b. Seal off the cockpit and hide in the pilot supplies cupboard.
         c. You discover a gun in the glove compartment and shoot the demon.
-    """)
+    """
+    )
 
     # input prompt, user must choose between options: x, y, z
     choice = input("> ")
 
     if choice == "a":
-        dead("""
+        dead(
+            """
         You attempt to swing at the soul slayer but it morphs,
         and attacks. The demon grimey black pit of a face feasts on your soul.
-        """)
+        """
+        )
+    # game diverges into two different scenarios, morning_break or island_cave
     elif choice == "b":
-        print("""
+        print(
+            """
         You decide to wait out the night, with the gun loaded,
         and pressed against the cupboard door.
         You have survived...for now.
-        """)
+        """
+        )
         morning_break()
     elif choice == "c":
-        print("""
+        print(
+            """
         You startle the demon who has never experienced a gun before,
         however you do not kill it and the bullet is spat out.
         You make a run for it out into the darkness...
-        """)
+        """
+        )
         island_cave()
-    else:
-        print("HURRY!")
+    # User must choose an available option, to progress
+    elif choice != "a" or "b" or "c":
+        print(
+            """"HURRY! Choose!
+        a, b or c
+
+        Ctrl-c to quit
+        """
+        )
         survive_night()
 
 
 def island_cave():
-    print("""
+    print(
+        """
     Phew that was close, you were very lucky.
 
     Thankfully it was a full moon and this protected you from the demon, the legends call....
@@ -206,17 +232,20 @@ def island_cave():
     *type: a, b or c
 
 
-    """)
+    """
+    )
 
     choice = input("> ")
 
 
 def morning_break():
-    print(""""Congratulations you have survived the night.
+    print(
+        """"Congratulations you have survived the night.
 
     *type: a, b or c
 
-    """)
+    """
+    )
 
 
 start()

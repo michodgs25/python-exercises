@@ -63,7 +63,7 @@ def start():
     are the burning flames rapidly making their way towards you from the cockpit.
     You must react quickly to get out of the plane.
 
-    Type: a - cut seatbelt
+    *type: a - to cut seatbelt
     """)
 
     choice = input("> ")
@@ -72,7 +72,7 @@ def start():
         print("Well done, now exit the plane before it explodes!")
         retrieve_extinguisher()
     else:
-        dead("You burn alive. Ouch. Game over!")
+        dead("You burn alive. Ouch.")
 
 # user must put out the fire, the plane is the only hope of having shelter
 # a fire extinguisher is located at the rear of the plane
@@ -88,8 +88,9 @@ def retrieve_extinguisher():
 
     Choose wisely, otherwise the fire will engulf the plane and yourself
 
-    Choose:
-    *type
+
+    *type: a, b or c
+
           a. cockpit
           b. escape hatch
           c. underpassage
@@ -125,25 +126,25 @@ def put_fire_out():
 
     Which section will you extinguish first, which will put the fire OUT the fastest?
 
-    type option number*
+    *type: a, b or c
 
-    1. passenger section
-    2. cockpit entrance
-    3. giveup
+    a. passenger section
+    b. cockpit entrance
+    c. giveup
     """)
 
     # prompt user to pice an option
     choice = input("> ")
 
     # if elif and else group
-    if choice == "1":
+    if choice == "a":
         dead("The fire is too strong, and melts your eye balls.")
-    elif choice == "2":
+    elif choice == "b":
         print("Fire extinguished!! Well done!")
         survive_night()
     else:
         # if user choice is 3, or a none of the options, code below runs
-        choice != "1" or "2"
+        choice != "a" or "b"
         dead("Good luck in the next life.")
 
 
@@ -156,30 +157,29 @@ def survive_night():
     Now that you've extinguished the fire, there is no light whatsoever.
     A demon crashes into the side of cockpit, you have seconds to make a decision.
 
-    choose
-    type option letter*
+    *type: a, b or c
 
-        x. Fight the demon with your fire extinguisher
-        y. Seal off the cockpit and hide in the pilot supplies cupboard.
-        z. You discover a gun in the glove compartment and shoot the demon.
+        a. Fight the demon with your fire extinguisher
+        b. Seal off the cockpit and hide in the pilot supplies cupboard.
+        c. You discover a gun in the glove compartment and shoot the demon.
     """)
 
     # input prompt, user must choose between options: x, y, z
     choice = input("> ")
 
-    if choice == "x":
+    if choice == "a":
         dead("""
         You attempt to swing at the soul slayer but it morphs,
         and attacks. The demon grimey black pit of a face feasts on your soul.
         """)
-    elif choice == "y":
+    elif choice == "b":
         print("""
         You decide to wait out the night, with the gun loaded,
         and pressed against the cupboard door.
         You have survived...for now.
         """)
         morning_break()
-    elif choice == "z":
+    elif choice == "c":
         print("""
         You startle the demon who has never experienced a gun before,
         however you do not kill it and the bullet is spat out.
@@ -203,13 +203,20 @@ def island_cave():
 
     What is your next move?
 
+    *type: a, b or c
+
+
     """)
 
     choice = input("> ")
 
 
 def morning_break():
-    print("Congratulations you have survived the night.")
+    print(""""Congratulations you have survived the night.
+
+    *type: a, b or c
+
+    """)
 
 
 start()

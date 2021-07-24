@@ -205,12 +205,13 @@ def survive_night():
         )
         island_cave()
     # User must choose an available option, to progress
-    elif choice != "a" or "b" or "c":
+    else:
+        choice != "a" or "b" or "c"
         print(
             """"HURRY! Choose!
         a, b or c
 
-        Ctrl-c to quit
+        Or Ctrl-c to quit
         """
         )
         survive_night()

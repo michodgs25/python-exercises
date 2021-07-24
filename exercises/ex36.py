@@ -57,17 +57,13 @@ def dead(why):
 
 # define start of game
 def start():
-    print(
-        """
-
-    You awake amidst the wreckage of your private plane.
-    It's the middle of the night, and the only light for miles around,
-    are the burning flames rapidly making their way towards you from the cockpit.
-    You must react quickly to get out of the plane.
-
-    *type: a - to cut seatbelt
-    """
-    )
+    print("""
+          You awake amidst the wreckage of your private plane.
+          It's the middle of the night, and the only light for miles around,
+          are the burning flames rapidly making their way towards you from the cockpit.
+          You must react quickly to get out of the plane.
+          *type: a - to cut seatbelt
+          """)
 
     choice = input("> ")
 
@@ -84,23 +80,20 @@ def start():
 
 # define put_fire_out function, user needs to pick right choice to enter next sceneario
 def retrieve_extinguisher():
-    print(
-        """
-    You stand outside and realise you must put out the fire to save the remainder of the plane,
-    this plane could be your only chance of calling for help.
-    There is a fire extinguisher at the rear of the plane,
-    how will you get there without dying?
+    print("""
+          You stand outside and realise you must put out the fire to save the remainder of the plane,
+          this plane could be your only chance of calling for help.
+          There is a fire extinguisher at the rear of the plane,
+          how will you get there without dying?
 
-    Choose wisely, otherwise the fire will engulf the plane and yourself
+          Choose wisely, otherwise the fire will engulf the plane and yourself
 
-
-    *type: a, b or c
+          *type: a, b or c
 
           a. cockpit
           b. escape hatch
           c. underpassage
-    """
-    )
+          """)
 
     # user prompt, must choose between three choices to retrieve the fire extinguisher
     choice = input("> ")
@@ -124,23 +117,21 @@ def retrieve_extinguisher():
 
 # Next scene, user needs to put out the fire
 def put_fire_out():
-    print(
-        """
-    You have found the extinguisher,
-    you need to put the fire out quickly.
+    print("""
+          You have found the extinguisher,
+          you need to put the fire out quickly.
 
-    The fire has engulfed the main seating area,
-    the extinguisher has a limited supply however, so choose wisely.
+          The fire has engulfed the main seating area,
+          the extinguisher has a limited supply however, so choose wisely.
 
-    Which section will you extinguish first, which will put the fire OUT the fastest?
+          Which section will you extinguish first, which will put the fire OUT the fastest?
 
-    *type: a, b or c
+          *type: a, b or c
 
-    a. passenger section
-    b. cockpit entrance
-    c. giveup
-    """
-    )
+          a. passenger section
+          b. cockpit entrance
+          c. giveup
+    """)
 
     # prompt user to pice an option
     choice = input("> ")
@@ -159,94 +150,84 @@ def put_fire_out():
 
 # define survive night function, user must choose how he will survive
 def survive_night():
-    print(
-        """
-    You have extinguished the fire well done, however during the commotion,
-    this has drawn the attention of the island demons.
+    print("""
+       You have extinguished the fire well done, however during the commotion,
+       this has drawn the attention of the island demons.
 
-    Now that you've extinguished the fire, there is no light whatsoever.
-    A demon crashes into the side of cockpit, you have seconds to make a decision.
+       Now that you've extinguished the fire, there is no light whatsoever.
+       A demon crashes into the side of cockpit, you have seconds to make a decision.
 
-    *type: a, b or c
+       *type: a, b or c
 
-        a. Fight the demon with your fire extinguisher
-        b. Seal off the cockpit and hide in the pilot supplies cupboard.
-        c. You discover a gun in the glove compartment and shoot the demon.
-    """
-    )
+       a. Fight the demon with your fire extinguisher
+       b. Seal off the cockpit and hide in the pilot supplies cupboard.
+       c. You discover a gun in the glove compartment and shoot the demon.
+    """)
 
     # input prompt, user must choose between options: x, y, z
     choice = input("> ")
 
     if choice == "a":
-        dead(
-            """
+        dead("""
         You attempt to swing at the soul slayer but it morphs,
         and attacks. The demon grimey black pit of a face feasts on your soul.
-        """
-        )
+        """)
     # game diverges into two different scenarios, morning_break or island_cave
     elif choice == "b":
-        print(
-            """
+        print("""
         You decide to wait out the night, with the gun loaded,
         and pressed against the cupboard door.
         You have survived...for now.
-        """
-        )
+        """)
         morning_break()
     elif choice == "c":
-        print(
-            """
+        print("""
         You startle the demon who has never experienced a gun before,
         however you do not kill it and the bullet is spat out.
         You make a run for it out into the darkness...
-        """
-        )
+        """)
         island_cave()
     # User must choose an available option, to progress
     else:
         choice != "a" or "b" or "c"
-        print(
-            """"HURRY! Choose!
+        print(""""
+        HURRY! Choose!
         a, b or c
 
         Or Ctrl-c to quit
-        """
-        )
+        """)
         survive_night()
 
-
+#  user must navigate out of the cave
 def island_cave():
-    print(
-        """
-    Phew that was close, you were very lucky.
+    print("""
+         Phew that was close, you were very lucky.
 
-    Thankfully it was a full moon and this protected you from the demon, the legends call....
-    soul slayer.
-    In your blind desperation you found a cave and hidden under a huge rock.
-    However this is the soul slayers den, and it is not happy.
-    You still have the gun but you only have two bullets left.
+         Thankfully it was a full moon and this protected you from the demon,
+         legends call....
+         the soul slayer.
+         In your blind desperation you found a cave and hidden under a huge rock.
+         However this is the soul slayers den, and it is not happy.
+         You still have the gun but you only have two bullets left.
 
-    What is your next move?
+         What is your next move?
 
-    *type: a, b or c
+         *type: a, b, c or d
 
-
-    """
-    )
+         a. Hideout under the rock until day comes
+         b. Throw the gun in the opposite direction and run
+         c. Attempt to gun down the soul slayer with remaining two bullets
+         d. Cover yourself in dirt and attempt to sneak out
+         """)
 
     choice = input("> ")
 
 
 def morning_break():
-    print(
-        """"Congratulations you have survived the night.
+    print(""""Congratulations you have survived the night.
 
-    *type: a, b or c
-
-    """
-    )
+         *type: a, b or c
+         """)
 
 
 start()

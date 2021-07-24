@@ -162,7 +162,7 @@ def survive_night():
        a. Fight the demon with your fire extinguisher
        b. Seal off the cockpit and hide in the pilot supplies cupboard.
        c. You discover a gun in the glove compartment and shoot the demon.
-    """)
+       """)
 
     # input prompt, user must choose between options: x, y, z
     choice = input("> ")
@@ -206,7 +206,7 @@ def island_cave():
          Thankfully it was a full moon and this protected you from the demon,
          legends call....
          the soul slayer.
-         In your blind desperation you found a cave and hidden under a huge rock.
+         In your blind desperation you found a cave and hid under a huge rock.
          However this is the soul slayers den, and it is not happy.
          You still have the gun but you only have two bullets left.
 

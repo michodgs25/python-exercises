@@ -151,7 +151,7 @@ def bear_room():
         # if user chose to open door and bear has moved, user moves to the gold room
         elif choice == "open door" and bear_moved:
             gold_room()
-        # if none of the options take from above, loops starts from the top
+        # if none of the options take from above, loops restarts from the top
         else:
             print("I have no idea what that means.")
 

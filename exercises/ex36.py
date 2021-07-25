@@ -215,12 +215,39 @@ def island_cave():
          *type: a, b, c or d
 
          a. Hideout under the rock until day comes
-         b. Throw the gun in the opposite direction and run
-         c. Attempt to gun down the soul slayer with remaining two bullets
-         d. Cover yourself in dirt and attempt to sneak out
-         """)
 
-    choice = input("> ")
+         b. Throw the gun in the opposite direction and run
+
+         c. Attempt to gun down the soul slayer with remaining two bullets
+
+         d. Cover yourself in dirt and sneak out
+         """)
+# To break the infinite loop, user must choose b or d option
+    while True:
+        # user prompt, user must choose to progress
+        choice = input("> ")
+        # user choices, a or c equal gameover, other choices = game continues
+        if choice == "a":
+            dead("Soul slayer eats you alive and burns your soul.")
+        elif choice == "c":
+            dead("""
+            Slayer does not flinch as both bullets pass through.
+
+            It's bone filthy hands grab you by the neck,
+            and rips your spinal cord out and decapitates you.
+            """)
+        elif choice == "b" or "d":
+            print("""
+            You have escaped, and hide in a nearby mud lagoon.
+            Which by sheer chance, shields you from the slayers smell sensor.
+            """)
+            # True value met, loop ends
+            escaped = True
+            # function called, next phase of game coming up
+            morning_break()
+        else:
+            # if requirements not met, gameover
+            dead("You are doomed.")
 
 
 def morning_break():

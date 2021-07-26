@@ -57,7 +57,7 @@ def dead(why):
 
 def trump(win):
     print(win,
-    """You have completed the escape the island 3.
+    """You have completed escape the island 3.
     Congratulations""")
     exit(0)
 
@@ -287,7 +287,7 @@ def reach_cliff():
     print("""
     With tools you construct an aerial.
     You see a cliff top, towards the far middle right of the island.
-    This is the best chance of gaining signal to be recused.
+    This is the best chance of gaining signal to be saved.
 
     You must determined your route, as there are three ways to reach the cliff.
 
@@ -330,12 +330,13 @@ def rescue_team():
     With his slicked back wig just hanging on,
     he reasures you that 'it'll will be okay'.
 
-    *type a
+    *type - I love you Trump
     """)
     choice = input("> ")
-    if choice == "a":
+    if choice == "I love you Trump":
         trump("Oh donald, oh donald, my sweet love!")
     else:
-        print("Well this is awkward, I'd preferred mitt romney..")
+        print("Well this is awkward, I'd would've preferred mitt romney..")
+        dead()
 
 start()

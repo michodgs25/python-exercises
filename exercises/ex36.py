@@ -55,6 +55,13 @@ def dead(why):
     exit(0)
 
 
+def trump(win):
+    print(win,
+    """You have completed the escape the island 3.
+    Congratulations""")
+    exit(0)
+
+
 # define start of game
 def start():
     print("""
@@ -179,7 +186,7 @@ def survive_night():
         and pressed against the cupboard door.
         You have survived...for now.
         """)
-        morning_break()
+        search_plane()
     elif choice == "c":
         print("""
         You startle the demon who has never experienced a gun before,
@@ -270,13 +277,13 @@ def search_plane():
         You notice that when you bring it above your head, the crackle gets louder,
         perhaps if you construct an aerial, and find a higher point; you will be able to make contact.
         """)
-        higher_point()
+        reach_cliff()
     else:
         dead("You collapse.")
 
 # user needs to choose a route, to the next segment of game
 # - only one route to success - c
-def higher_point():
+def reach_cliff():
     print("""
     With tools you construct an aerial.
     You see a cliff top, towards the far middle right of the island.
@@ -292,30 +299,43 @@ def higher_point():
 
     remember you have limited supplies
     """)
-
+    # user prompt
     choice = input("> ")
 
-    choices = ["a", "b", "c"]
-    for choice in choices:
-        if choice == "a":
-            dead("You die of dehyration")
-        elif choice == "b":
-            dead("""
-            You are strangled to death by a demonic giant python,
-            which lives in the huge forest trees.
-            """)
-        elif choice == "c":
-            print("""
-            Success!
-            You are able to send an SOS, a rescue team will arrive in the 30 minutes.
-            """)
-            break
-            rescue_team()
-        else:
-            dead("You die of indecision")
+    # choice a and b = gameover
+    if choice == "a":
+        dead("You die of dehyration")
 
+    elif choice == "b":
+        dead("""
+        You are strangled to death by a demonic giant python,
+        which lives in the huge forest trees.
+        """)
+    # choice c, game continues
+    elif choice == "c":
+        print("""
+        Success!
+        You are able to send an SOS,
+        and a rescue team will arrive in the 30 minutes.""")
+        rescue_team()
+    # any other key = gameover
+    else:
+        dead("You die of indecision")
+
+# define rescue team function, returns game completed value
 def rescue_team():
-    print("You have been rescued")
+    print("""
+    Ex president Donald Trump swoops down from the helicopter,
+    and airlifts you to safety.
+    With his slicked back wig just hanging on,
+    he reasures you that 'it'll will be okay'.
 
+    *type a
+    """)
+    choice = input("> ")
+    if choice == "a":
+        trump("Oh donald, oh donald, my sweet love!")
+    else:
+        print("Well this is awkward, I'd preferred mitt romney..")
 
 start()

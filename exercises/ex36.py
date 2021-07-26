@@ -258,23 +258,24 @@ def search_plane():
     You need to search the remnants of the plane for any equipment and supplies.
 
     *type: a - search plane
-         """)
+    """)
 
-         choice = input("> ")
+    choice = input("> ")
 
-         if choice == a:
-             print("""
-             The plane is a complete wreckage, however you find some burnt ham sandwiches& crumpled cafe lattes.
-             More importantly during the search of the cockpit, the pilot radio is emitting a small crackle.
-             Maybe someone is trying to get in contact, however you cannot get it beyond a crackle.
+    if choice == "a":
+        print("""
+        The plane is a complete wreckage, however you find some burnt ham sandwiches& crumpled cafe lattes.
+        More importantly during the search of the cockpit, the pilot radio is emitting a small crackle.
+        Maybe someone is trying to get in contact, however you cannot get it beyond a crackle.
+        You notice that when you bring it above your head, the crackle gets louder,
+        perhaps if you construct an aerial, and find a higher point; you will be able to make contact.
+        """)
+        higher_point()
+    else:
+        dead("You collapse.")
 
-             You notice that when you bring it above your head, the crackle gets louder, perhaps if you construct an aerial,
-             and find a higher point; you will be able to make contact.
-             """)
-             higher_point()
-        else:
-            dead("You collapse.")
-
+# user needs to choose a route, to the next segment of game
+# - only one route to success - c
 def higher_point():
     print("""
     With tools you construct an aerial.
@@ -287,11 +288,34 @@ def higher_point():
 
     a. the beach, straight towards the cliff
     b. the forest to the left of the cliff
-    c. a rocky hill to the right of the cliff
+    c. follow the stream that leads up a grassy hill, towards the cliff
 
     remember you have limited supplies
     """)
 
-    choic
+    choice = input("> ")
+
+    choices = ["a", "b", "c"]
+    for choice in choices:
+        if choice == "a":
+            dead("You die of dehyration")
+        elif choice == "b":
+            dead("""
+            You are strangled to death by a demonic giant python,
+            which lives in the huge forest trees.
+            """)
+        elif choice == "c":
+            print("""
+            Success!
+            You are able to send an SOS, a rescue team will arrive in the 30 minutes.
+            """)
+            break
+            rescue_team()
+        else:
+            dead("You die of indecision")
+
+def rescue_team():
+    print("You have been rescued")
+
 
 start()

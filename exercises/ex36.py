@@ -164,7 +164,7 @@ def survive_night():
        c. You discover a gun in the glove compartment and shoot the demon.
        """)
 
-    # input prompt, user must choose between options: x, y, z
+    # input prompt, user must choose between options: a, b, c
     choice = input("> ")
 
     if choice == "a":
@@ -244,17 +244,54 @@ def island_cave():
             # True value met, loop ends
             escaped = True
             # function called, next phase of game coming up
-            morning_break()
+            search_plane()
         else:
             # if requirements not met, gameover
             dead("You are doomed.")
 
+# a simple scenario for the user, option a to progress
+def search_plane():
+    print(""""
+    Congratulations you have survived the night.
+    Thankfully the demons do not appear during daytime, so you are safe.
 
-def morning_break():
-    print(""""Congratulations you have survived the night.
+    You need to search the remnants of the plane for any equipment and supplies.
 
-         *type: a, b or c
+    *type: a - search plane
          """)
 
+         choice = input("> ")
+
+         if choice == a:
+             print("""
+             The plane is a complete wreckage, however you find some burnt ham sandwiches& crumpled cafe lattes.
+             More importantly during the search of the cockpit, the pilot radio is emitting a small crackle.
+             Maybe someone is trying to get in contact, however you cannot get it beyond a crackle.
+
+             You notice that when you bring it above your head, the crackle gets louder, perhaps if you construct an aerial,
+             and find a higher point; you will be able to make contact.
+             """)
+             higher_point()
+        else:
+            dead("You collapse.")
+
+def higher_point():
+    print("""
+    With tools you construct an aerial.
+    You see a cliff top, towards the far middle right of the island.
+    This is the best chance of gaining signal to be recused.
+
+    You must determined your route, as there are three ways to reach the cliff.
+
+    *type a, b, or c
+
+    a. the beach, straight towards the cliff
+    b. the forest to the left of the cliff
+    c. a rocky hill to the right of the cliff
+
+    remember you have limited supplies
+    """)
+
+    choic
 
 start()

@@ -37,43 +37,51 @@ I run a file by typing python *filename*
 
 * escape-sequences.py - Escape Sequences
 
-* ex11.py - Ask questions
+* ask-questions.py - Ask questions
 
-* ex12.py - Prompting people
+* prompting.py - Prompting people
 
-* ex13.py - Parameters, Unpacking, Variables
+* parameters-unpack-variables.py - Parameters, Unpacking, Variables
 
-* ex14.py - Prompting and Passing
+* prompting-passing.py - Prompting and Passing
 
-* ex15.py - Reading files
+* read-files.py - Reading files
 
-* ex16.py - Reading and Writing Files - ex16.py
+* read-write-files.py - Reading and Writing Files - ex16.py
 
-* ex17.py - More Reading and Writing Files
+* read-write-files2.py - More Reading and Writing Files
 
-* ex18.py - Names, Variables, Code, Functions
+* name-var-functions.py - Names, Variables, Code, Functions
 
-* ex19.py - Functions and variables
+* functions-variables.py - Functions and variables
 
-* ex20.py - Function and Files
+* functions-files.py - Function and Files
 
-* ex21.py - Functions can return something
+* more-functions.py - Functions can return something
 
-* ex22.py - A recap and practice on previous exercises
+* recap.py - A recap and practice on previous exercises
 
-* ex23.py - Strings Bytes, and Character encoding
+* strings-bytes.py - Strings Bytes, and Character encoding
   - Switches, Conventions, and encodings
 
-* ex24.py - More recap and practice
+* recap-practice.py - More recap and practice
 
-* ex25.py - Even more recap and practice
+* practice-recap.py - Even more recap and practice
 
 * ex26.py& exercise26.txt - Test program
 
-* ex27.py - Memorizing logic, truth tables, truth terms
+* logic-expressions.py - Memorizing logic, truth tables, truth terms
 
 * ex28.py - Boolean practice
 
-* ex29.py - What-if, create if statement examples
+* if-statement.py - What-if, create if statement examples
 
-* ex30.py - if, elif, else statement examples
+* if-elif-else.py - if, elif, else statement examples
+
+* making-decisions.py - ask user to make decisions
+
+* loops-lists.py - create lists and loops
+
+* while-loops.py - learn how while loops work
+
+* list-elements.py - Learn how to access list elements

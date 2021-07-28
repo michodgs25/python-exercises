@@ -85,3 +85,7 @@ I run a file by typing python *filename*
 * while-loops.py - learn how while loops work
 
 * list-elements.py - Learn how to access list elements
+
+* branches-and-functions.py - Create a game using functions
+
+* symbols-review.txt - review all boolean& mathematical operators 

@@ -46,6 +46,7 @@ x = array[2] # 'foo'
 #  Given an array of integers, return a new array, such that each element at index i of the new array,
 #        is the product of all the numbers in the original array except the one at i.
 
+
 # for example, if input: [1, 2, 3, 4, 5], the expected output would be [120, 60, 40, 30, 24]
 # If our input was [3, 2, 1], the expected output would be [2, 3, 6]
 
@@ -54,3 +55,47 @@ x = array[2] # 'foo'
 
 # This problem would be easy with division:
 # an optimal Solution could just find the product of all the numbers in the array, and then divide by each of the numbers.
+
+# To solve this without division, we will rely on a common technique in array problems:
+#          precomputing results from subarrays, and building up a solution from those results.
+#          To find the value associated with i'th element, we must compute the product of all numbers before i and the product of all number after i.
+#          If we could efficiently calculate these two, we can multiply them out to get the desired product.
+
+# In order to find the product of numbers before i, we can generate a list of prefix products.
+# Specifically, the i'th element in the list will be a product of all numbers including i.
+# We can generate, a list of suffix products.
+# For each index we can multiply the appropriate prefix and suffix values to obtain our solution.
+
+
+def products(nums):
+    # Generate prefix products
+    prefix_products = []
+    for num in nums:
+        if prefix_products:
+            prefix_products.append(prefix_products[-1] * num)
+        else:
+            prefix_products.append(num)
+    # Generate suffix products
+    suffix_products = []
+    for num in reversed(nums):
+        if suffix_products:
+            suffix_products.append(suffix_products[-1] * num)
+        else:
+            suffix_products.append(num)
+    suffix_products = list(reversed(suffix_products))
+
+    # Generate result from the product of prefixes and suffixes
+    result = []
+    for i in range(len(nums)):
+        if i == 0:
+            result.append(suffix_products[i + 1])
+        elif i == len(nums) - 1:
+            result.append(prefix_products[i - 1])
+        else:
+            result.append(
+                prefix_products[i - 1] * suffix_products[i + 1]
+            )
+    return result
+
+# This runs in O(n) time and space,
+# since iterating over the input array O(n) time and the prefix and suffix arrays take up O(n) space.

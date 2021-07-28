@@ -142,3 +142,20 @@ Benefits of OOP
 * Easier to debug, classes often contain all applicable information to them
 * Secure, protects information through Encapsulation
 """)
+
+
+print("""
+Ten real world examples of things that would fit in a list:
+-------------------------------------------------------------
+
+1. Football Teams
+2. Cars
+3. Shopping lists
+4. Olympic sports
+5. Shoes
+6. holiday destinations
+7. Fantasy football league table
+8. Running times
+9. Gym equipment
+10. Fast food restaurants
+""")

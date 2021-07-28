@@ -35,17 +35,16 @@ ten_things = "Apples Oranges Crows Telephone Light Sugar"
 
 print("Wait there are not 10 things in that list. Let's fix that.")
 
-stuff = ten_things.split(' ')
-more_stuff = ["Day", "Night", "Song", "Frisbee",
-              "Corn", "Banana", "Girl", "Boy"]
+stuff = ten_things.split(' ') # take ten_things list, equal it to stuff, and split each word into separate strings
+more_stuff = ["Day", "Night", "Song", "Frisbee", "Corn", "Banana", "Girl", "Boy"] # create more_stuff list
 
-while len(stuff) != 10:
-    next_one = more_stuff.pop()
-    print("Adding: ", next_one)
-    stuff.append(next_one)
-    print(f"There are {len(stuff)} items now.")
+while len(stuff) != 10: # while loop checks length not equal to ten
+    next_one = more_stuff.pop() # define create next_one variable, equal too more_stuff list, used pop() method, remove first three elements
+    print("Adding: ", next_one) # print 'adding:' to the console, call next_one function, adds item to the more_stuff list
+    stuff.append(next_one) # append next_one variable values to the stuff list
+    print(f"There are {len(stuff)} items now.") # print formatted string, with len(stuff) interpolated
 
-print("There we go: ", stuff)
+print("There we go: ", stuff) # print stuff list to the console
 
 print("Let's do some things with stuff.")
 
@@ -108,3 +107,38 @@ You can use a list whenever you have something that matches the list data struct
 
      3. If you need to go through the contents linearly(first to last). Remember that's what for-loops are for.
  """)
+
+
+print("""
+Object oriented programming/ oop/ OOP.
+Is a programming paradigm that relies on the concept of classes and objects.
+It is used to structure a software program into simple, reusuable pieces of code blueprints(usually called classes),
+which are used to create individual instances of objects.
+A class is an abstract blueprint used to create more specific, concrete objects.
+Classes often represent broad categories, like: Car or Dog that share attributes.
+These classes define what attributes an instance of this type will have, like: color, but not the value of those attributes for a specific object.
+
+Classes also contain functions, called methods available only to objects of that type.
+These functions are defined within the class and perform some action helpful to that specific type of object.
+
+For example, our Car class may have a method: repaint that changes the color attribute of our car.
+This function is only helpful to objects of type Car, so we declare it within the Car class thus making it a method.
+
+Class templates are used as a blueprint to create individual objects.
+These represent specific examples of the abstract class, like myCar or goldenRetriever.
+Each object can have unique values to the properties defined in the class.
+
+For example, say we created a class, Car, to contain all the properties a car must have, color, brand, and model.
+We then create an instance of a Car type object, myCar to represent my specific car.
+We could then set the value of the properties defined in the class to describe my car, without affecting other objects or the class template.
+
+We can then reuse this class to represent any number of cars.
+
+Benefits of OOP
+---------------
+* OOP models complex things as reproducible, simple structures
+* Reusuable, OOP objects can be used across programs
+* Allows for class-specific behavior through polymorphism
+* Easier to debug, classes often contain all applicable information to them
+* Secure, protects information through Encapsulation
+""")

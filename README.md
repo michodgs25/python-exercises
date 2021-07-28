@@ -17,25 +17,25 @@ I run a file by typing python *filename*
 
 ## Exercises
 
-* ex1.py - Comments and pound Characters
+* printing.py - Comments and pound Characters
 
-* ex2.py - Numbers and Math
+* numbers.py - Numbers and Math
 
-* ex3.py - Variables and Names
+* variables.py - Variables and Names
 
-* ex4.py - Variables
+* more-variables.py - Variables
 
-* ex5.py - More Variables and printing
+* variables-printing.py - More Variables and printing
 
-* ex6.py - Strings and Text
+* strings-text.py - Strings and Text
 
-* ex7.py - More printing
+* more-printing.py - More printing
 
-* ex8.py - Printing, printing
+* printing-printing.py - Printing, printing
 
-* ex9.py - Printing, Printing, Printing
+* print-printing.py - Printing, Printing, Printing
 
-* ex10.py - Escape Sequences
+* escape-sequences.py - Escape Sequences
 
 * ex11.py - Ask questions
 

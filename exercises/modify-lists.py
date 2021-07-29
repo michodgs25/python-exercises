@@ -36,9 +36,10 @@ ten_things = "Apples Oranges Crows Telephone Light Sugar"
 print("Wait there are not 10 things in that list. Let's fix that.")
 
 stuff = ten_things.split(' ') # take ten_things list, equal it to stuff, and split each word into separate strings
+
 more_stuff = ["Day", "Night", "Song", "Frisbee", "Corn", "Banana", "Girl", "Boy"] # create more_stuff list
 
-while len(stuff) != 10: # while loop checks length not equal to ten
+while len(stuff) != 10: # while loop checks length not equal to ten, iterates an item to
     next_one = more_stuff.pop() # define create next_one variable, equal too more_stuff list, used pop() method, remove first three elements
     print("Adding: ", next_one) # print 'adding:' to the console, call next_one function, adds item to the more_stuff list
     stuff.append(next_one) # append next_one variable values to the stuff list
@@ -159,3 +160,25 @@ Ten real world examples of things that would fit in a list:
 9. Gym equipment
 10. Fast food restaurants
 """)
+
+footballTeams = ["Manchester United", "Manchester City", "Chelsea", "Liverpool"]
+print(footballTeams)
+print(footballTeams[1])
+print(footballTeams[1:3])
+print(footballTeams.pop(1))
+print(len(footballTeams))
+
+more_teams = ["Barcelona", "Real Madrid", "Juventus", "Ac Milan"]
+
+for Teams in footballTeams:
+    if footballTeams != 2:
+        footballTeams.append(more_teams)
+
+        print("Your new Superleague: ", footballTeams)
+
+        print("Inter Milan also wants to join")
+        more_teams.insert(2, "Inter Milan")
+        print(footballTeams)
+    else:
+        print("Superleague anyone?")
+    break

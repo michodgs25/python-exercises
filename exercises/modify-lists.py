@@ -161,6 +161,8 @@ Ten real world examples of things that would fit in a list:
 10. Fast food restaurants
 """)
 
+# football teams script
+
 footballTeams = ["Manchester United", "Manchester City", "Chelsea", "Liverpool"]
 print(footballTeams)
 print(footballTeams[1])

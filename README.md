@@ -88,4 +88,6 @@ I run a file by typing python *filename*
 
 * branches-and-functions.py - Create a game using functions
 
-* symbols-review.txt - review all boolean& mathematical operators 
+* symbols-review.txt - review all boolean& mathematical operators
+
+* dictionaries.py - Learn and create python dictionaries

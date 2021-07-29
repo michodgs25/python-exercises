@@ -71,7 +71,8 @@ city = cities.get('TX', 'Does not exist')
 print(f"The city for the state 'TX' is: {city}")
 
 
-print(""" What Dictionaries can do
+print("""
+What Dictionaries can do
 
 A dictionary is another example of a data structure, and like a list,
 it is one of the most commonly used data structures in programming.
@@ -79,4 +80,30 @@ A dict is used to map or associate things you want to store to keys you need to 
  """)
 
 
-# England cities and counties abbreviations
+# England cities and their football teams
+
+# map city examples
+
+england_cities = {
+        'Birmingham': 'BI',
+        'Aberdeen': 'AN',
+        'leeds': 'LD',
+        'Liverpool': 'LP',
+        'Manchester': 'MA',
+        'London': 'LCY'
+}
+
+# Map football teams
+football_teams = {
+         'BI': 'Aston Villa, Birmingham City',
+         'AN': 'Aberdeen',
+         'LP': 'Liverpool, Everton, Tramere Rovers',
+         'MA': 'Manchester United, Manchester City, Salford',
+         'LD': 'Leeds United',
+         'LCY': 'Chelsea, Arsenal, Spurs, Crystal Palace, Fulham',
+}
+
+# print out some teams
+print('-' * 10)
+print("LCY city has: ", football_teams['LCY'])
+print("MA city has: ", football_teams['MA'])

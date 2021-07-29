@@ -69,3 +69,14 @@ if not state:
 # get a city with a default value
 city = cities.get('TX', 'Does not exist')
 print(f"The city for the state 'TX' is: {city}")
+
+
+print(""" What Dictionaries can do
+
+A dictionary is another example of a data structure, and like a list,
+it is one of the most commonly used data structures in programming.
+A dict is used to map or associate things you want to store to keys you need to get.
+ """)
+
+
+# England cities and counties abbreviations

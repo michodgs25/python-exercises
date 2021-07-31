@@ -123,3 +123,14 @@ for city, abbrev in list(england_cities.items()):
 print("-" * 40)
 for team, city in list(football_teams.items()):
     print(f"{city} teams are: {team}")
+
+print("-" * 50)
+# safely get the abbreviation by city that might not be there
+england_cities = england_cities.get("Glasgow")
+
+if not city:
+    print("Sorry, no Glasgow.")
+
+# get a city with a default value
+city = cities.get("GW", "Does not exist")
+print(f"The city 'GW': {city}")

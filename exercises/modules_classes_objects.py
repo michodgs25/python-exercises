@@ -117,13 +117,38 @@ Getting things from things
 """)
 
 #dict style
-mystuff['apples']
+# mystuff['apple']
 
 # module style
-mystuff.apples()
-print(mystuff.tangerine)
+# mystuff.apple()
+# print(mystuff.tangerine)
 
 # class style
-thing = MyStuff()
-thing.apples()
-print(thing.tangerine)
+# thing = MyStuff()
+# thing.apple()
+# print(thing.tangerine)
+
+print("""
+A first Class example
+-----------------------------
+There are many similarities in these three key=value container types:
+""")
+
+class Song(object):
+    def __init__(self, lyrics):
+        self.lyrics = lyrics
+
+    def sing_me_a_song(self):
+        for line in self.lyrics:
+            print(line)
+
+happy_bday = Song(["Happy birthday to you",
+                   "I don't want to get sued",
+                   "So I'll stop right there\n"])
+
+bulls_on_parade = Song(["They rally around tha family",
+                        "with pockets full of shells"])
+
+happy_bday.sing_me_a_song()
+
+bulls_on_parade.sing_me_a_song()

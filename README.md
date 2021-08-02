@@ -91,3 +91,8 @@ I run a file by typing python *filename*
 * symbols-review.txt - review all boolean& mathematical operators
 
 * dictionaries.py - Learn and create python dictionaries
+
+* modules_classes_objects.py - Use python to create and manipulate
+   - modules
+   - classes
+   - objects

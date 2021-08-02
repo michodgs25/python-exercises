@@ -149,6 +149,23 @@ happy_bday = Song(["Happy birthday to you",
 bulls_on_parade = Song(["They rally around tha family",
                         "with pockets full of shells"])
 
+welcome_to_the_internet = Song(["Welcome to the internet",
+                                "What would you prefer?",
+                                "Would you like to fight for civil rights or tweet a racial slur?",
+                                "Be happy",
+                                "Be horny",
+                                "Be bursting with rage",
+                                "We got a million different ways to engage\n"])
+
+visiting_hours = Song(["I wish that heaven",
+                       "had visiting hours",
+                       "So I could just show up",
+                       "And bring good news\n"])
+
+visiting_hours.sing_me_a_song()
+
+welcome_to_the_internet.sing_me_a_song()
+
 happy_bday.sing_me_a_song()
 
 bulls_on_parade.sing_me_a_song()

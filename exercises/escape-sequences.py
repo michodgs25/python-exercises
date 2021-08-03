@@ -24,4 +24,5 @@ years = input()
 print("What do you enjoy most about your job?")
 joy = input()
 
-print(f"Your job title is {job_title}, you have worked at {company} for one year")
+print(f"""Your job title is {job_title}, you have worked at {company}
+ for one year and you enjoy {joy} about your job""")

@@ -35,7 +35,7 @@ I run a file by typing python *filename*
 
 * print-printing.py - Printing, Printing, Printing
 
-* escape-sequences.py - Escape Sequences
+* user-input.py - create user input statements
 
 * ask-questions.py - Ask questions
 

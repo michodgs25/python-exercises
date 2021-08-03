@@ -54,7 +54,7 @@ def dead(why):
     print(why, "Gameover")
     exit(0)
 
-
+# define potential game ending
 def trump(win):
     print(win,
     """You have completed escape the island 3.
